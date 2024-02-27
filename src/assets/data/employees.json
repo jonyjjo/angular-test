@@ -1,27 +1,72 @@
 [
-    {
-        "id": 24001,
-        "name": "John Doe",
-        "position": "Front-End Developer"
-    },
-    {
-        "id": 24002,
-        "name": "Janet Smith",
-        "position": "UI/UX Designer"
-    },
-    {
-        "id": 24003,
-        "name": "Peter Hudge",
-        "position": "Back-End Developer"
-    },
-    {
-        "id": 24004,
-        "name": "Carlos Bean",
-        "position": "IT Manager"
-    },
-    {
-        "id": 24005,
-        "name": "Priscilla Cole",
-        "position": "Product Owner"
-    }
-  ]
+  {
+    "id": 24001,
+    "firstName": "John",
+    "lastName": "Doe",
+    "position": "Front-End Developer",
+    "isActive": true
+  },
+  {
+    "id": 24002,
+    "firstName": "Arnold",
+    "lastName": "Ham",
+    "position": "Front-End Developer",
+    "isActive": false
+  },
+  {
+    "id": 24003,
+    "firstName": "Janet",
+    "lastName": "Smith",
+    "position": "UI/UX Designer",
+    "isActive": true
+  },
+  {
+    "id": 24004,
+    "firstName": "Peter",
+    "lastName": "Hudge",
+    "position": "Back-End Developer",
+    "isActive": true
+  },
+  {
+    "id": 24005,
+    "firstName": "Carlos",
+    "lastName": "Bean",
+    "position": "IT Manager",
+    "isActive": true
+  },
+  {
+    "id": 24006,
+    "firstName": "Priscilla",
+    "lastName": "Cole",
+    "position": "Product Owner",
+    "isActive": false
+  },
+  {
+    "id": 24007,
+    "firstName": "Summer",
+    "lastName": "Evans",
+    "position": "Product Owner",
+    "isActive": false
+  },
+  {
+    "id": 24008,
+    "firstName": "Winter",
+    "lastName": "Zhu",
+    "position": "Product Owner",
+    "isActive": true
+  },
+  {
+    "id": 24009,
+    "firstName": "Scott",
+    "lastName": "Summers",
+    "position": "Front-End Developer",
+    "isActive": true
+  },
+  {
+    "id": 24010,
+    "firstName": "Raymund",
+    "lastName": "Chang",
+    "position": "Front-End Developer",
+    "isActive": false
+  }
+]

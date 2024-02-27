@@ -1,5 +1,9 @@
 export interface IEmployee {
     id: number;
-    name: string;
+    firstName: string;
+    lastName: string;
     position: string;
+
+    isActive?: boolean;
+    isTenured?: boolean;
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { IEmployee } from '../models/employee.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,14 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-  // Method to fetch employees ID
-  // getEmployeeID(): Observable<number> {
+  // [Applicant] TODO: Create method to fetch tenured employee IDs
+  getTenuredEmployees(): Observable<number[]> {
+    return of([]);
+  }
 
-  // }
-
-  // Method to fetch employees
-  // getEmployees(employeeID: number): Observable<any> {
-
-  // }
+  // [Applicant] TODO: Create method to fetch all employees
+  getEmployees(): Observable<IEmployee[]> {
+    return of([]);
+  }
 
 }

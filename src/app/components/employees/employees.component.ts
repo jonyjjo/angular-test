@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IEmployee } from 'src/app/models/employee.model';
 import { EmployeeService } from 'src/app/service/employee.service';
 
 @Component({
@@ -7,20 +8,26 @@ import { EmployeeService } from 'src/app/service/employee.service';
   styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit{
-  empData: any[] | undefined;
+  employees?: IEmployee[];
 
   constructor(private employeeService: EmployeeService) { }
-
-
 
   ngOnInit(): void {
     this.fetchEmployees();
   }
 
+
   fetchEmployees(): void {
-    // Fetch employee ID first
+    // [Applicant] TODO: Fetch employees, then fetch tenured employee IDs to set/map it in model
+
     //this.employeeService.getEmployeeID
     //this.employeeService.getEmployee(employeeID)
+    this.employees = [{
+      id: 1,
+      firstName: "mock",
+      lastName: "data",
+      position: "none"
+    }];
   }
 
 }

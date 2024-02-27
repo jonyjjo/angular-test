@@ -1,6 +1,16 @@
-<div>
+<!-- [Applicant] TODO: Map employee details -->
+<div class="employee-card row">
+  <div class="col">
     <p>ID: 24001</p>
-    <p>Name: John Doe</p>
+    <p>Name: <span>Doe</span>, <span>John</span></p>
     <p>Position: Front-End Developer</p>
-    <hr>
+  </div>
+  <!-- [Applicant] TODO: Display only tenured if employee is tenured -->
+  <div class="col-2 d-flex justify-content-center align-items-center">
+    Tenured
+  </div>
+  <!-- [Applicant] TODO: Change true to employee's active value -->
+  <div class="col-2 status d-flex justify-content-center align-items-center" [ngClass]="{ 'active': true }">
+    {{ true ? 'Active' : 'Inactive' }}
+  </div>
 </div>

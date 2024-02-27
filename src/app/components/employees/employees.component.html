@@ -1,1 +1,7 @@
-<employee-card></employee-card>
+<div class="employee-list container p-3">
+  <h3>Employee List</h3>
+
+  <div *ngFor="let employee of employees" class="employee-list--item">
+    <employee-card></employee-card>
+  </div>
+</div>
