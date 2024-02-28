@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { IEmployee } from '../models/employee.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class EmployeeService {
 
   constructor(private http: HttpClient) { }
@@ -16,7 +13,7 @@ export class EmployeeService {
   }
 
   // [Applicant] TODO: Create method to fetch all employees
-  getEmployees(): Observable<IEmployee[]> {
+  getEmployees(): Observable<any[]> {
     return of([]);
   }
 

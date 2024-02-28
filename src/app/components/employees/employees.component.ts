@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from 'src/app/models/employee.model';
-import { EmployeeService } from 'src/app/service/employee.service';
 
 @Component({
   selector: 'app-employees',
@@ -8,11 +6,11 @@ import { EmployeeService } from 'src/app/service/employee.service';
   styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
-  employees?: IEmployee[];
+  employees?: any[];
   showTenured: boolean = false;
   showActive: boolean = false;
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.fetchEmployees();
