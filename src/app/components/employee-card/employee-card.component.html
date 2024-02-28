@@ -1,16 +1,25 @@
 <!-- [Applicant] TODO: Map employee details -->
 <div class="employee-card row">
-  <div class="col">
-    <p>ID: 24001</p>
-    <p>Name: <span>Doe</span>, <span>John</span></p>
-    <p>Position: Front-End Developer</p>
+  <div class="col employee-card--details">
+    <div>
+      <b>ID:</b>
+      <span>24001</span>
+    </div>
+    <div>
+      <b>Name:</b>
+      <span>Doe</span>, <span>John</span>
+    </div>
+    <div>
+      <b>Position:</b>
+      <span>Front-End Developer</span>
+    </div>
   </div>
   <!-- [Applicant] TODO: Display only tenured if employee is tenured -->
   <div class="col-2 d-flex justify-content-center align-items-center">
-    Tenured
+    <span class="font-weight-bold">Tenured</span>
   </div>
-  <!-- [Applicant] TODO: Change true to employee's active value -->
+  <!-- [Applicant] TODO: Properly map to employee's active value -->
   <div class="col-2 status d-flex justify-content-center align-items-center" [ngClass]="{ 'active': true }">
-    {{ true ? 'Active' : 'Inactive' }}
+    <span class="font-weight-bold">{{ true ? 'Active' : 'Inactive' }}</span>
   </div>
 </div>

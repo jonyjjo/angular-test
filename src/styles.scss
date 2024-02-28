@@ -5,3 +5,7 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+
+button:focus {
+  box-shadow: none !important;
+}

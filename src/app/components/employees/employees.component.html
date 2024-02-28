@@ -1,7 +1,23 @@
-<div class="employee-list container p-3">
-  <h3>Employee List</h3>
+<div class="employee-list">
+  <nav class="navbar navbar-light bg-light position-fixed w-100 py-3">
+    <h3 class="m-0">Employee List</h3>
+    <!-- [Applicant] TODO: Properly toggle tenured employees display -->
+    <!-- [Applicant] TODO: Disable button if no employees present -->
+    <div>
+      <button class="mx-2 btn employee-list--toggle"
+        [ngClass]="showTenured ? 'btn-primary' : 'btn-outline-secondary'" (click)="showTenured = !showTenured">
+        Tenured Only
+      </button>
+      <button class="mx-2 btn employee-list--toggle"
+        [ngClass]="showActive ? 'btn-primary' : 'btn-outline-secondary'" (click)="showActive = !showActive">
+        Active Only
+      </button>
+    </div>
+  </nav>
 
-  <div *ngFor="let employee of employees" class="employee-list--item">
-    <employee-card></employee-card>
+  <div class="employee-list--item-container py-3 px-5">
+    <div *ngFor="let employee of employees" class="employee-list--item my-3">
+      <employee-card></employee-card>
+    </div>
   </div>
 </div>

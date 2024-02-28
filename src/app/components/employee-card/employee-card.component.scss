@@ -1,15 +1,21 @@
 .employee-card {
   padding: 10px;
 
-  p {
-    margin: 0;
-  }
+  
 
   .status {
-    font-weight: bold;
-
     &.active {
       color: #81D2C7;
+    }
+  }
+
+  &--details {
+    b::after {
+      content: ' ';
+    }
+
+    div {
+      margin: 0;
     }
   }
 }

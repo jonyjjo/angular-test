@@ -1,8 +1,19 @@
 .employee-list {
-  margin: 0 10px;
+  nav {
+    z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+
+  &--toggle {
+    width: 10rem;
+  }
 
   &--item {
     background-color: #E0E0E2;
     border-radius: 10px;
+
+    &-container {
+      padding-top: 4rem !important;
+    }
   }
 }
