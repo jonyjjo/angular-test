@@ -5,19 +5,21 @@
     <!-- [Applicant] TODO: Disable button if no employees present -->
     <div>
       <button class="mx-2 btn employee-list--toggle"
-        [ngClass]="showTenured ? 'btn-primary' : 'btn-outline-secondary'" (click)="showTenured = !showTenured">
+        [ngClass]="showTenured ? 'btn-primary' : 'btn-outline-secondary'" (click)="showTenured = !showTenured; showTenuredEmployees()">
         Tenured Only
       </button>
       <button class="mx-2 btn employee-list--toggle"
-        [ngClass]="showActive ? 'btn-primary' : 'btn-outline-secondary'" (click)="showActive = !showActive">
+        [ngClass]="showActive ? 'btn-primary' : 'btn-outline-secondary'" (click)="showActive = !showActive; showActiveEmployees()">
         Active Only
       </button>
     </div>
   </nav>
 
   <div class="employee-list--item-container py-3 px-5">
-    <div class="employee-list--item my-3">
-      <employee-card></employee-card>
-    </div>
+    <ng-template ngFor let-item [ngForOf]="clonedEmployees">
+      <div class="employee-list--item my-3">
+        <employee-card [employee]="item"></employee-card>
+      </div>
+    </ng-template>
   </div>
 </div>
