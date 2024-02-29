@@ -10,7 +10,7 @@ import { IEmployee } from '../models/employee.model';
 export class EmployeeService {
 
   constructor(private http: HttpClient) { }
-
+  //privateURLs
   private URL_EMPLOYEES = '../assets/data/employees.json';
   private URL_TENURED_ID = '../assets/data/tenured_ids.json';
 
