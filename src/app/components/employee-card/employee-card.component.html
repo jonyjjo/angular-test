@@ -3,23 +3,23 @@
   <div class="col employee-card--details">
     <div>
       <b>ID:</b>
-      <span>24001</span>
+      <span>{{employee.id}}</span>
     </div>
     <div>
       <b>Name:</b>
-      <span>Doe</span>, <span>John</span>
+      <span>{{employee.firstName}}</span>, <span>{{employee.lastName}}</span>
     </div>
     <div>
       <b>Position:</b>
-      <span>Front-End Developer</span>
+      <span>{{employee.position}}</span>
     </div>
   </div>
   <!-- [Applicant] TODO: Display only tenured if employee is tenured -->
   <div class="col-2 d-flex justify-content-center align-items-center">
-    <span class="font-weight-bold">Tenured</span>
+    <span class="font-weight-bold" *ngIf="employee?.isTenured">Tenured</span>
   </div>
   <!-- [Applicant] TODO: Properly map to employee's active value -->
   <div class="col-2 status d-flex justify-content-center align-items-center" [ngClass]="{ 'active': true }">
-    <span class="font-weight-bold">{{ true ? 'Active' : 'Inactive' }}</span>
+    <span class="font-weight-bold">{{ employee.isActive ? 'Active' : 'Inactive' }}</span>
   </div>
 </div>
